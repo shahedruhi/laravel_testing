@@ -1,7 +1,7 @@
 <?php
 
 class PracticeTest extends PHPUnit_Framework_TestCase {
-public function testHelloWorld()
+    public function testHelloWorld()
     {
      $greeting = 'Hello, World.';
 
@@ -10,6 +10,12 @@ public function testHelloWorld()
      $val = 0;
      $this->assertSame(0, $val);
 
+    }
+
+    public function testLaravelDevsIncludesDayle()
+    {
+    $names = ['Taylor', 'Shawn', 'Dayle'];
+    $this->assertContains('Dayle', $names);
     }
 }
 
