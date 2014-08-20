@@ -1,5 +1,20 @@
 <?php
 
+class DateFormatter {
+
+    protected $stamp;
+
+    public function __construct(DateTime $stamp)
+    {
+        $this->stamp = $stamp;
+    }
+
+    public function getStamp()
+    {
+        return $this->stamp;
+    }
+}
+
 class PracticeTest extends PHPUnit_Framework_TestCase {
     public function testHelloWorld()
     {
@@ -28,11 +43,15 @@ class PracticeTest extends PHPUnit_Framework_TestCase {
         $this->assertArrayHasKey('parents', $family); // true
         $this->assertInternalType('string', $family['parents']); // false
 
-        $age = 25;
+        $age =25;
         $this->assertInternalType('integer', $age); // true
     }
 
-
+    public function testStampMustBeInstanceOfDateTime()
+    {
+        $date = new DateFormatter(new DateTime);
+        $this->assertInstanceOf('DateTime', $date->getStamp()); // true
+    }
 
 }
 
