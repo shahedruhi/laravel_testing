@@ -1,6 +1,15 @@
 <?php
 
-class DateFormatter {
+//ini_set('DateTime','UTC');
+
+
+class Student
+{
+    public $id;
+
+
+}
+/*class DateFormatter {
 
     protected $stamp;
 
@@ -13,14 +22,14 @@ class DateFormatter {
     {
         return $this->stamp;
     }
-}
+}*/
 
 class PracticeTest extends PHPUnit_Framework_TestCase {
     public function testHelloWorld()
     {
      $greeting = 'Hello, World.';
 
-     $this->assertTrue($greeting === 'Hello, World.', $greeting);
+     $this->assertTrue($greeting == 'Hello, World.', $greeting);
 
      $val = 0;
      $this->assertSame(0, $val);
@@ -51,7 +60,14 @@ class PracticeTest extends PHPUnit_Framework_TestCase {
     {
         $date = new DateFormatter(new DateTime);
         $this->assertInstanceOf('DateTime', $date->getStamp()); // true
-    }*/
+    }
+    */
+
+    public function testMustBeInstanceOfStudent()
+    {
+        $a_student = new student();
+        $this->assertInstanceOf('Student', $a_student); // true
+    }
 
 }
 
