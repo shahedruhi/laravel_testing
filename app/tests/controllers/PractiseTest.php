@@ -15,7 +15,7 @@ class PracticeTest extends PHPUnit_Framework_TestCase {
     public function testLaravelDevsIncludesDayle()
     {
     $names = ['Taylor', 'Shawn', 'Dayle'];
-    $this->assertContains('Dayle', $names);
+    $this->assertNotContains('Troll', $names);
     }
 }
 
