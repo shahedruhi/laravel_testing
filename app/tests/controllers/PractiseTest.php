@@ -20,7 +20,7 @@ class PracticeTest extends PHPUnit_Framework_TestCase {
     {
      $greeting = 'Hello, World.';
 
-     $this->assertEquals('Hello, World.', $greeting);
+     $this->assertFalse($greeting === 'Hello, Worldg.', $greeting);
 
      $val = 0;
      $this->assertSame(0, $val);
@@ -47,11 +47,11 @@ class PracticeTest extends PHPUnit_Framework_TestCase {
         $this->assertInternalType('integer', $age); // true
     }
 
-    public function testStampMustBeInstanceOfDateTime()
+    /*public function testStampMustBeInstanceOfDateTime()
     {
         $date = new DateFormatter(new DateTime);
         $this->assertInstanceOf('DateTime', $date->getStamp()); // true
-    }
+    }*/
 
 }
 
