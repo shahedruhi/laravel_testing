@@ -17,5 +17,18 @@ class PracticeTest extends PHPUnit_Framework_TestCase {
     $names = ['Taylor', 'Shawn', 'Dayle'];
     $this->assertNotContains('Troll', $names);
     }
+
+    public function testFamilyRequiresParent()
+    {
+        $family = [
+            'parents' => 'Joe',
+            'children' => ['Timmy', 'Suzy']
+        ];
+
+        $this->assertArrayHasKey('parents', $family); // true
+    }
+
+
+
 }
 
