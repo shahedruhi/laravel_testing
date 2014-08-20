@@ -20,7 +20,7 @@ class PracticeTest extends PHPUnit_Framework_TestCase {
     {
      $greeting = 'Hello, World.';
 
-     $this->assertFalse($greeting === 'Hello, Worldg.', $greeting);
+     $this->assertTrue($greeting === 'Hello, World.', $greeting);
 
      $val = 0;
      $this->assertSame(0, $val);
